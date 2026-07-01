@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  margin: 0;
+  background: #06080F;
+  color: #C9CEE0;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Visible keyboard focus everywhere */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #F9B31C;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Thin custom scrollbar matching the instrument-panel feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #06080F;
+}
+::-webkit-scrollbar-thumb {
+  background: #3A2D6B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5B4B9E;
+}
+
+/* Glass panel utility — used for cards across all sections */
+@layer components {
+  .glass-panel {
+    background: rgba(26, 19, 64, 0.25);
+    border: 1px solid rgba(201, 206, 224, 0.1);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .glass-panel-raised {
+    background: rgba(26, 19, 64, 0.35);
+    border: 1px solid rgba(95, 224, 212, 0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px rgba(6, 8, 15, 0.5);
+  }
+
+  .text-gradient-amber {
+    background: linear-gradient(135deg, #F9B31C 0%, #F9D58A 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .eyebrow {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #5FE0D4;
+  }
+
+  .btn-instrument {
+    border: 1px solid rgba(201, 206, 224, 0.35);
+    border-radius: 999px;
+    padding: 0.65rem 1.5rem;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: transparent;
+    color: #F9B31C;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .btn-instrument:hover {
+    background: #F9B31C;
+    color: #06080F;
+    border-color: #F9B31C;
+  }
+}
+
+/* Respect reduced motion preference globally */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
