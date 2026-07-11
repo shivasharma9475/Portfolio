@@ -1,4 +1,4 @@
-# Arin Vesa — Portfolio
+# Shiva Sharma — Portfolio
 
 A premium, 3D-driven portfolio built in the visual language of the supplied
 "nucleus in deep space" welcome page. The hero's living, noise-deformed
