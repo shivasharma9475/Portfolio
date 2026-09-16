@@ -31,7 +31,7 @@ export const education = [
     id: "edu-01",
     degree: "Bachelor of Technology (B.Tech)",
     institution: "Shri Ramswaroop Memorial University, Lucknow",
-    period: "2023 — Present",
+    period: "2023 — 2027(Expected)",
     detail:
       "Computer Science & Engineering (Data Science & AI) | CGPA: 8.14 / 10",
   },
@@ -40,7 +40,7 @@ export const education = [
     degree: "Senior Secondary (Class XII - PCM)",
     institution: "Silver Stone Public School, Chandausi",
     period: "2022 — 2023",
-    detail: "Percentage: 76.70%",
+    detail: "Percentage: 73.14%",
   },
 ];
 
