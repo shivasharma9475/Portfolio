@@ -60,12 +60,27 @@ export default function Projects() {
               </div>
             ))}
           </div>
-          <a
-            href={project.href}
-            className="font-mono text-xs uppercase tracking-[0.1em] text-ion hover:text-amber transition-colors duration-200 whitespace-nowrap"
-          >
-            View →
-          </a>
+          <div className="flex items-center gap-3">
+  {project.demo && (
+    <a
+      href={project.demo}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 rounded-full border border-ion/40 bg-ion/10 px-4 py-2 font-mono text-[11px] uppercase tracking-[0.1em] text-ion hover:bg-ion hover:text-void transition-all duration-200 whitespace-nowrap"
+    >
+      Live Demo ↗
+    </a>
+  )}
+
+  <a
+    href={project.href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="font-mono text-xs uppercase tracking-[0.1em] text-ion hover:text-amber transition-colors duration-200 whitespace-nowrap"
+  >
+    GitHub →
+  </a>
+</div>
         </div>
       </div>
     </TiltCard>

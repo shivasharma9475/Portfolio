@@ -44,13 +44,26 @@ export default function Experience() {
                   {job.summary}
                 </p>
                 <ul className="space-y-1.5">
-                  {job.highlights.map((h) => (
-                    <li key={h} className="text-sm text-mist flex gap-2">
-                      <span className="text-ion mt-0.5">▸</span>
-                      <span>{h}</span>
-                    </li>
-                  ))}
-                </ul>
+  {job.highlights.map((h) => (
+    <li key={h} className="text-sm text-mist flex gap-2">
+      <span className="text-ion mt-0.5">▸</span>
+      <span>{h}</span>
+    </li>
+  ))}
+</ul>
+
+{job.certificate && (
+  <div className="mt-5">
+    <a
+      href={job.certificate}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 rounded-full border border-amber/40 bg-amber/10 px-4 py-2 font-mono text-[11px] uppercase tracking-[0.1em] text-amber hover:bg-amber hover:text-void transition-all duration-200"
+    >
+      View Certificate ↗
+    </a>
+  </div>
+)}
               </motion.div>
             ))}
           </div>
